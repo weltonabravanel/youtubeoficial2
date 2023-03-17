@@ -1,18 +1,9 @@
 import axios from "axios";
-const BASE_URL = "https://youtube-v3-alternative.p.rapidapi.com/"
-const options = {
-  method: 'GET',
+const request = axios.create({
+  baseURL: "https://youtube.googleapis.com/youtube/v3/",
   params: {
-    maxResults:"50"
+    key: "AIzaSyCAZkmJKKD1ByfyyvezqVWv1ohIdarhVMY",
   },
-  headers: {
-    'X-RapidAPI-Key': '',
-    'X-RapidAPI-Host': 'youtube-v3-alternative.p.rapidapi.com'
-  }
-};
+});
 
-export const api3 = async(url) =>{
-    const {data} = await axios.get(`${BASE_URL}${url}`,options)
-    return data;
-  }
 export default request;
